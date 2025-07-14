@@ -1,0 +1,48 @@
+baseURL = "https://zack-zhang1031.github.io/myblog/"
+languageCode = "zh-cn"
+title = "我的Hugo博客"
+theme = "hugo-theme-dream"
+
+enableRobotsTXT = true
+hasCJKLanguage = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  description = "热爱AI、游戏与极客文化，欢迎来到我的个人博客！"
+  avatar = "/images/48.png"
+  mainSections = ["posts"]
+  enableRSS = true
+  enableToc = true
+
+  [params.author]
+    name = "Zack-Zhang1031"
+    email = "zhangkun1031@hotmail.com"
+    github = "Zack-Zhang1031"
+
+  [params.social]
+    github = "Zack-Zhang1031"
+    email = "zhangkun1031@hotmail.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "首页"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 3
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
