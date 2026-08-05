@@ -17,11 +17,6 @@ jobs:
 
       - name: Sync to Gitee
         env:
-          GITEE_SSH_KEY: ${{ secrets.GITEE_SSH_KEY }}
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
         run: |
-          mkdir -p ~/.ssh
-          echo "$GITEE_SSH_KEY" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -t ed25519 gitee.com >> ~/.ssh/known_hosts 2>/dev/null
-          git remote add gitee git@gitee.com:rainyjensen/myblog.git
-          git push gitee main --force
+          git push "https://rainyjensen:${GITEE_TOKEN}@gitee.com/rainyjensen/myblog.git" main --force
