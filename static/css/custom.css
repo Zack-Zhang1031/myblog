@@ -713,6 +713,36 @@
 .lang-badge--hugo    { background: #FF6719; }
 .lang-badge--gitee   { background: #C71D23; }
 
+/* 项目卡片 - 平台标识 */
+.project-card .pc-platform {
+  font-size: 1.1rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* 项目卡片 - 技术栈标签 */
+.project-card .pc-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-top: .6rem;
+}
+
+.project-card .pc-tech-tag {
+  font-size: .7rem;
+  padding: .12rem .45rem;
+  border-radius: 5px;
+  background: rgba(148, 163, 184, .15);
+  color: #94a3b8;
+  white-space: nowrap;
+  transition: background .15s, color .15s;
+}
+
+.project-card:hover .pc-tech-tag {
+  background: rgba(245, 158, 11, .12);
+  color: #f59e0b;
+}
+
 @media (prefers-color-scheme: dark) {
   .project-card {
     background: rgba(255, 255, 255, .035);

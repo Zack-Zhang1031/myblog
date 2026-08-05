@@ -14,12 +14,12 @@
     <!-- 数钱 -->
     <div class="work-card work-card--amber">
       <div class="work-media" data-media="shuqian">
-        <!-- 视频模式：暂无演示视频 -->
+        <!-- 视频模式：真实视频 -->
         <div class="wm-display wm-display--active" data-type="video">
-          <div class="wm-no-video">
-            <span class="wm-shot-icon">📹</span>
-            <p>暂无演示视频</p>
-          </div>
+          <video class="wm-real-video" controls preload="metadata" poster="/images/shuqian-1.png">
+            <source src="/videos/shuqian-demo.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+          </video>
         </div>
         <!-- 截图模式：真实截图 -->
         <div class="wm-display" data-type="shot">
@@ -36,6 +36,7 @@
         <p>休闲点钞小游戏 · 考验手速与眼力</p>
         <div class="work-actions-inline">
           <a class="play-btn play-btn--amber play-btn--sm" href="https://www.crazygames.com/preview/d1b4d9b3-f1e7-419c-8336-c65c37fa3419?gameBuildId=10c47402-f440-40f9-a940-448fa1466cd3&qaTool=true&disableSubmitQA=true&role=developer" target="_blank" rel="noopener">▶ 试玩</a>
+          <button class="mute-btn-sm" onclick="window.__toggleVideoMute('shuqian', this)">🔇 静音</button>
           <div class="work-tags">
             <span class="work-tag">休闲</span>
           </div>
@@ -74,6 +75,103 @@
         </div>
       </div>
     </div>
+
+  </div>
+</section>
+
+<!-- ============ Open Source Projects ============ -->
+<section class="home-section">
+  <div class="section-header">
+    <h2 class="section-title">💻 开源项目</h2>
+    <a href="/games/#github" class="section-more">全部项目 →</a>
+  </div>
+  <div class="project-grid">
+
+    <!-- MindFace-Lite -->
+    <a class="project-card" href="https://github.com/Zack-Zhang1031/MindFace-Lite" target="_blank" rel="noopener">
+      <div class="pc-head">
+        <strong>MindFace-Lite</strong>
+        <span class="pc-platform" title="GitHub">🐙</span>
+      </div>
+      <p class="pc-desc">MindFace 系列的轻量级实现，面向移动端的人脸识别模型。</p>
+      <div class="pc-tech">
+        <span class="pc-tech-tag">Python</span>
+        <span class="pc-tech-tag">PyTorch</span>
+        <span class="pc-tech-tag">人脸识别</span>
+      </div>
+    </a>
+
+    <!-- word_tool -->
+    <a class="project-card" href="https://github.com/Zack-Zhang1031/word_tool" target="_blank" rel="noopener">
+      <div class="pc-head">
+        <strong>word_tool</strong>
+        <span class="pc-platform" title="GitHub">🐙</span>
+      </div>
+      <p class="pc-desc">PDF/TXT/Excel 英文单词提取工具：过滤已学单词 + 批量翻译，导出 Excel，支持 OCR。</p>
+      <div class="pc-tech">
+        <span class="pc-tech-tag">Python</span>
+        <span class="pc-tech-tag">OCR</span>
+        <span class="pc-tech-tag">PDF</span>
+        <span class="pc-tech-tag">Excel</span>
+      </div>
+    </a>
+
+    <!-- crisis-social-media-classification -->
+    <a class="project-card" href="https://github.com/Zack-Zhang1031/crisis-social-media-classification" target="_blank" rel="noopener">
+      <div class="pc-head">
+        <strong>crisis-social-media-classification</strong>
+        <span class="pc-platform" title="GitHub">🐙</span>
+      </div>
+      <p class="pc-desc">危机事件社交媒体文本分类的机器学习实验与分析。</p>
+      <div class="pc-tech">
+        <span class="pc-tech-tag">Python</span>
+        <span class="pc-tech-tag">scikit-learn</span>
+        <span class="pc-tech-tag">NLP</span>
+        <span class="pc-tech-tag">Jupyter</span>
+      </div>
+    </a>
+
+    <!-- AtlasSplit -->
+    <a class="project-card" href="https://gitee.com/rainyjensen/AtlasSplit" target="_blank" rel="noopener">
+      <div class="pc-head">
+        <strong>AtlasSplit</strong>
+        <span class="pc-platform" title="Gitee">🐱</span>
+      </div>
+      <p class="pc-desc">输入 Excel/CSV + 需求描述，自动完成统计、分摊、校验并写回结果。</p>
+      <div class="pc-tech">
+        <span class="pc-tech-tag">Python</span>
+        <span class="pc-tech-tag">pandas</span>
+        <span class="pc-tech-tag">Excel</span>
+      </div>
+    </a>
+
+    <!-- mind_trip -->
+    <a class="project-card" href="https://gitee.com/rainyjensen/mind_trip" target="_blank" rel="noopener">
+      <div class="pc-head">
+        <strong>mind_trip</strong>
+        <span class="pc-platform" title="Gitee">🐱</span>
+      </div>
+      <p class="pc-desc">MindTrip 心理健康辅助项目，基于 NLP 的情绪分析与对话系统。</p>
+      <div class="pc-tech">
+        <span class="pc-tech-tag">Python</span>
+        <span class="pc-tech-tag">NLP</span>
+        <span class="pc-tech-tag">知识图谱</span>
+      </div>
+    </a>
+
+    <!-- myblog -->
+    <a class="project-card" href="https://github.com/Zack-Zhang1031/myblog" target="_blank" rel="noopener">
+      <div class="pc-head">
+        <strong>myblog</strong>
+        <span class="pc-platform" title="GitHub">🐙</span>
+      </div>
+      <p class="pc-desc">本站源码：基于 Hugo + Dream 主题的个人主页 / 博客，GitHub Actions 自动部署。</p>
+      <div class="pc-tech">
+        <span class="pc-tech-tag">Hugo</span>
+        <span class="pc-tech-tag">HTML/CSS</span>
+        <span class="pc-tech-tag">CI/CD</span>
+      </div>
+    </a>
 
   </div>
 </section>
