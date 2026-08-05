@@ -2,12 +2,12 @@
 
 基于 [Hugo](https://gohugo.io/) + [hugo-theme-dream](https://github.com/g1eny0ung/hugo-theme-dream) 的个人主页 / 博客,通过 GitHub Actions 自动部署到 GitHub Pages。
 
-🔗 线上地址:<https://zack-zhang1031.github.io/myblog/>
+🔗 线上地址:<https://zack-zhang1031.github.io/>
 
 ## 站点结构
 
 - **首页**:博客文章列表(`content/posts/`)
-- **作品**(`content/games.md`,`/myblog/games/`):独立游戏展示(CrazyGames)+ GitHub / Gitee 开源项目卡片
+- **作品**(`content/games.md`,`/games/`):独立游戏展示(CrazyGames)+ GitHub / Gitee 开源项目卡片
 - **关于我**(`content/about/`,点头像翻面):个人简介、技能栈、联系方式、社交链接
 
 ## 关键配置
@@ -21,7 +21,7 @@
 
 ```bash
 hugo server -D
-# 打开 http://localhost:1313/myblog/
+# 打开 http://localhost:1313/
 ```
 
 ## 部署

@@ -1,4 +1,16 @@
-{{ if (eq . "about") }}
+{{ $customItem := index site.Params.navItems . }}
+{{ if $customItem }}
+  {{ with $customItem }}
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="{{ .href }}" target="{{ .target }}" title="{{ .title }}">
+    {{ if .icon }}
+    <ion-icon name="{{ .icon }}"></ion-icon>
+    {{ end }}
+    {{ .title }}
+  </a>
+</li>
+  {{ end }}
+{{ else if (eq . "about") }}
 
 {{ with site.GetPage "/about" }}
 {{ $aboutPages := .Resources.ByType "page" }}

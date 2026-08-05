@@ -1,144 +1,164 @@
 ---
-title: "🎮 作品 / Works"
+title: "🎮 作品 & 项目"
 date: 2024-01-01T00:00:00+08:00
 draft: false
 author: "Zack-Zhang1031"
 description: "Zack-Zhang1031 的独立游戏与开源项目展示"
 ---
 
-## 🕹️ 独立游戏 / Indie Games
-
-我把做出来的休闲小游戏发布在了 **CrazyGames**,欢迎试玩!每个游戏下方都预留了**截图区与视频演示区**,后续会持续更新实际画面。
-
-<!-- ============================================================
-     游戏一:数钱
-     替换截图区:把 <div class="media-slot">...</div> 换成
-       <img src="/images/数钱-截图.jpg" alt="数钱 游戏截图" style="width:100%;border-radius:12px;">
-     替换视频区:粘贴 B 站嵌入 iframe,例如
-       <iframe src="//player.bilibili.com/player.html?bvid=BVxxxx" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;border-radius:12px;"></iframe>
-     试玩链接:当前是 CrazyGames 预览链接,游戏正式上线后请换成
-       https://www.crazygames.com/game/<你的游戏slug>
-============================================================ -->
-
-### 💰 数钱
-
-<div class="media-slot" style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;border:2px dashed rgba(245,158,11,.5);background:linear-gradient(135deg,#1f2937 0%,#b45309 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fde68a;margin:1.5rem 0;text-align:center;">
-  <span style="font-size:3rem;line-height:1;">🖼️</span>
-  <span style="margin-top:.6rem;font-weight:700;font-size:1.05rem;">游戏截图 / Game Screenshot</span>
-  <span style="font-size:.8rem;opacity:.75;margin-top:.2rem;">替换为 &lt;img&gt; 放置《数钱》游戏画面</span>
-</div>
-
-一款轻松休闲的**点钞**小游戏,考验你的手速与眼力。在限定时间内尽可能准确地清点钞票,挑战更高分数。
-
-<div style="margin:1rem 0;">
-  <a href="https://www.crazygames.com/preview/d1b4d9b3-f1e7-419c-8336-c65c37fa3419?gameBuildId=10c47402-f440-40f9-a940-448fa1466cd3&qaTool=true&disableSubmitQA=true&role=developer" target="_blank" rel="noopener" style="display:inline-block;padding:.65rem 1.5rem;background:#f59e0b;color:#111827;border-radius:8px;font-weight:700;text-decoration:none;">▶ 在 CrazyGames 试玩</a>
-</div>
-
-<div class="media-slot" style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;border:2px dashed rgba(59,130,246,.5);background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#bfdbfe;margin:1.5rem 0;text-align:center;">
-  <span style="font-size:3rem;line-height:1;">📹</span>
-  <span style="margin-top:.6rem;font-weight:700;font-size:1.05rem;">视频演示 / Video Demo</span>
-  <span style="font-size:.8rem;opacity:.75;margin-top:.2rem;">替换为 B 站 / YouTube 嵌入 iframe</span>
-</div>
+<!-- 页内锚点导航 -->
+<nav class="page-nav">
+  <a href="#games">🕹️ 独立游戏</a>
+  <a href="#github">🐙 GitHub</a>
+  <a href="#gitee">🐱 Gitee</a>
+</nav>
 
 ---
 
-### 💵 捡钱
+## 🕹️ 独立游戏 {#games}
 
-<div class="media-slot" style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;border:2px dashed rgba(34,197,94,.5);background:linear-gradient(135deg,#1f2937 0%,#166534 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#bbf7d0;margin:1.5rem 0;text-align:center;">
-  <span style="font-size:3rem;line-height:1;">🖼️</span>
-  <span style="margin-top:.6rem;font-weight:700;font-size:1.05rem;">游戏截图 / Game Screenshot</span>
-  <span style="font-size:.8rem;opacity:.75;margin-top:.2rem;">替换为 &lt;img&gt; 放置《捡钱》游戏画面</span>
+我把做出来的休闲小游戏发布在 **CrazyGames**，欢迎试玩！每个游戏都配有**视频演示**和**截图**，点击右下角按钮切换查看。
+
+<!-- ==================== 游戏一：数钱 ==================== -->
+<div class="game-showcase" id="game-shuqian">
+  <h3 class="game-title">💰 数钱</h3>
+  <p class="game-subtitle">轻松休闲的点钞小游戏，考验你的手速与眼力。在限定时间内尽可能准确地清点钞票，挑战更高分数。</p>
+  <!-- 主展示区（带右下角切换） -->
+  <div class="gs-main" data-media="shuqian">
+    <!-- 视频模式：暂无演示视频 -->
+    <div class="gs-display gs-display--active" data-type="video">
+      <div class="gs-no-video">
+        <span class="gs-shot-icon">📹</span>
+        <p>暂无演示视频</p>
+        <span class="gs-video-type">📹 视频</span>
+      </div>
+    </div>
+    <!-- 截图模式：真实截图 -->
+    <div class="gs-display" data-type="shot">
+      <img src="/images/shuqian-1.png" alt="数钱 游戏截图" class="gs-shot-img" loading="lazy" />
+    </div>
+    <!-- 右下角切换按钮 -->
+    <button class="gs-corner-toggle" onclick="event.stopPropagation();window.__toggleGSMode('shuqian', this)" title="切换视频/截图">
+      <span class="gct-icon">🖼️</span>
+      <span class="gct-label">截图</span>
+    </button>
+  </div>
+  <!-- 控制栏 -->
+  <div class="game-controls-bar">
+    <span class="gs-ctrl-hint">📸 已有截图 · 🎬 视频整理中</span>
+  </div>
+  <div class="game-actions">
+    <a class="play-btn play-btn--amber" href="https://www.crazygames.com/preview/d1b4d9b3-f1e7-419c-8336-c65c37fa3419?gameBuildId=10c47402-f440-40f9-a940-448fa1466cd3&qaTool=true&disableSubmitQA=true&role=developer" target="_blank" rel="noopener">▶ 在 CrazyGames 试玩</a>
+    <span class="game-tags">
+      <span class="game-tag">休闲</span>
+      <span class="game-tag">点击</span>
+    </span>
+  </div>
 </div>
 
-一款欢乐的**捡钱**街机小游戏,操控角色接住天上掉落的金币与红包,躲开陷阱,比拼连击与高分。
+<hr class="game-divider" />
 
-<div style="margin:1rem 0;">
-  <a href="https://www.crazygames.com/preview/e072a216-66f6-45da-92e1-5462cc4a1309?gameBuildId=30f942ad-72fc-4858-b812-95dfa984c8f0&qaTool=true&disableSubmitQA=true&role=developer" target="_blank" rel="noopener" style="display:inline-block;padding:.65rem 1.5rem;background:#22c55e;color:#052e16;border-radius:8px;font-weight:700;text-decoration:none;">▶ 在 CrazyGames 试玩</a>
+<!-- ==================== 游戏二：捡钱 ==================== -->
+<div class="game-showcase" id="game-jianqian">
+  <h3 class="game-title">💵 捡钱</h3>
+  <p class="game-subtitle">欢乐的街机小游戏，操控角色接住天上掉落的金币与红包，躲开陷阱，比拼连击与高分。</p>
+  <div class="gs-main" data-media="jianqian">
+    <!-- 视频模式：真实视频 -->
+    <div class="gs-display gs-display--active" data-type="video">
+      <video class="gs-real-video" controls preload="metadata" poster="/images/jianqian-1.png">
+        <source src="/videos/jianqian-demo.mp4" type="video/mp4">
+        您的浏览器不支持视频播放。
+      </video>
+    </div>
+    <!-- 截图模式：真实截图 -->
+    <div class="gs-display" data-type="shot">
+      <img src="/images/jianqian-1.png" alt="捡钱 游戏截图" class="gs-shot-img" loading="lazy" />
+    </div>
+    <button class="gs-corner-toggle" onclick="event.stopPropagation();window.__toggleGSMode('jianqian', this)" title="切换视频/截图">
+      <span class="gct-icon">🖼️</span>
+      <span class="gct-label">截图</span>
+    </button>
+  </div>
+  <div class="game-controls-bar">
+    <button class="gs-ctrl-btn" onclick="window.__toggleVideoMute('jianqian', this)">🔇 静音</button>
+    <span class="gs-ctrl-hint">🎬 点击视频播放 · 右下角切换截图</span>
+  </div>
+  <div class="game-actions">
+    <a class="play-btn play-btn--green" href="https://www.crazygames.com/preview/e072a216-66f6-45da-92e1-5462cc4a1309?gameBuildId=30f942ad-72fc-4858-b812-95dfa984c8f0&qaTool=true&disableSubmitQA=true&role=developer" target="_blank" rel="noopener">▶ 在 CrazyGames 试玩</a>
+    <span class="game-tags">
+      <span class="game-tag">街机</span>
+      <span class="game-tag">休闲</span>
+    </span>
+  </div>
 </div>
 
-<div class="media-slot" style="position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;border:2px dashed rgba(59,130,246,.5);background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#bfdbfe;margin:1.5rem 0;text-align:center;">
-  <span style="font-size:3rem;line-height:1;">📹</span>
-  <span style="margin-top:.6rem;font-weight:700;font-size:1.05rem;">视频演示 / Video Demo</span>
-  <span style="font-size:.8rem;opacity:.75;margin-top:.2rem;">替换为 B 站 / YouTube 嵌入 iframe</span>
-</div>
+<hr class="game-divider" />
+
+📺 **更多游戏实况与开发日志**：欢迎关注我的 [哔哩哔哩主页](https://space.bilibili.com/31032895)
 
 ---
 
-📺 **更多游戏实况与开发日志**:欢迎关注我的 [哔哩哔哩主页](https://space.bilibili.com/31032895)
+## 🐙 GitHub 开源项目 {#github}
 
----
-
-## 🐙 GitHub 开源项目
-
-<!-- 项目卡片网格:替换/增删卡片即可。language badge 颜色可自行调整。 -->
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0;">
-
-  <a href="https://github.com/Zack-Zhang1031/MindFace-Lite" target="_blank" rel="noopener" style="display:block;padding:1rem 1.1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;text-decoration:none;color:inherit;">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;">
+<div class="project-grid">
+  <a class="project-card" href="https://github.com/Zack-Zhang1031/MindFace-Lite" target="_blank" rel="noopener">
+    <div class="pc-head">
       <strong>MindFace-Lite</strong>
-      <span style="font-size:.72rem;padding:.15rem .5rem;border-radius:999px;background:#3572A5;color:#fff;">Python</span>
+      <span class="lang-badge lang-badge--python">Python</span>
     </div>
-    <p style="margin:.5rem 0 0;font-size:.85rem;opacity:.8;">MindFace 系列的轻量级实现。</p>
+    <p class="pc-desc">MindFace 系列的轻量级实现。</p>
   </a>
-
-  <a href="https://github.com/Zack-Zhang1031/word_tool" target="_blank" rel="noopener" style="display:block;padding:1rem 1.1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;text-decoration:none;color:inherit;">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;">
+  <a class="project-card" href="https://github.com/Zack-Zhang1031/word_tool" target="_blank" rel="noopener">
+    <div class="pc-head">
       <strong>word_tool ⭐</strong>
-      <span style="font-size:.72rem;padding:.15rem .5rem;border-radius:999px;background:#3D6117;color:#fff;">TeX</span>
+      <span class="lang-badge lang-badge--tex">TeX</span>
     </div>
-    <p style="margin:.5rem 0 0;font-size:.85rem;opacity:.8;">PDF/TXT/Excel 英文单词提取工具:过滤已学单词 + 批量翻译为中文,导出 Excel,支持 OCR,无需写代码。</p>
+    <p class="pc-desc">PDF/TXT/Excel 英文单词提取工具：过滤已学单词 + 批量翻译为中文，导出 Excel，支持 OCR。</p>
   </a>
-
-  <a href="https://github.com/Zack-Zhang1031/crisis-social-media-classification" target="_blank" rel="noopener" style="display:block;padding:1rem 1.1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;text-decoration:none;color:inherit;">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;">
+  <a class="project-card" href="https://github.com/Zack-Zhang1031/crisis-social-media-classification" target="_blank" rel="noopener">
+    <div class="pc-head">
       <strong>crisis-social-media-classification</strong>
-      <span style="font-size:.72rem;padding:.15rem .5rem;border-radius:999px;background:#DA5B0B;color:#fff;">Jupyter</span>
+      <span class="lang-badge lang-badge--jupyter">Jupyter</span>
     </div>
-    <p style="margin:.5rem 0 0;font-size:.85rem;opacity:.8;">危机事件社交媒体文本分类的机器学习实验与分析。</p>
+    <p class="pc-desc">危机事件社交媒体文本分类的机器学习实验与分析。</p>
   </a>
-
-  <a href="https://github.com/Zack-Zhang1031/myblog" target="_blank" rel="noopener" style="display:block;padding:1rem 1.1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;text-decoration:none;color:inherit;">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;">
+  <a class="project-card" href="https://github.com/Zack-Zhang1031/myblog" target="_blank" rel="noopener">
+    <div class="pc-head">
       <strong>myblog</strong>
-      <span style="font-size:.72rem;padding:.15rem .5rem;border-radius:999px;background:#FF6719;color:#fff;">Hugo</span>
+      <span class="lang-badge lang-badge--hugo">Hugo</span>
     </div>
-    <p style="margin:.5rem 0 0;font-size:.85rem;opacity:.8;">本站源码:基于 Hugo + Dream 主题的个人主页 / 博客。</p>
+    <p class="pc-desc">本站源码：基于 Hugo + Dream 主题的个人主页 / 博客。</p>
   </a>
-
 </div>
 
 ---
 
-## 🐱 Gitee 项目
+## 🐱 Gitee 项目 {#gitee}
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin:1.5rem 0;">
-
-  <a href="https://gitee.com/rainyjensen/mind_trip" target="_blank" rel="noopener" style="display:block;padding:1rem 1.1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;text-decoration:none;color:inherit;">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;">
+<div class="project-grid">
+  <a class="project-card" href="https://gitee.com/rainyjensen/mind_trip" target="_blank" rel="noopener">
+    <div class="pc-head">
       <strong>mind_trip</strong>
-      <span style="font-size:.72rem;padding:.15rem .5rem;border-radius:999px;background:#C71D23;color:#fff;">Gitee</span>
+      <span class="lang-badge lang-badge--gitee">Gitee</span>
     </div>
-    <p style="margin:.5rem 0 0;font-size:.85rem;opacity:.8;">MindTrip 项目仓库。</p>
+    <p class="pc-desc">MindTrip 项目仓库。</p>
   </a>
-
-  <a href="https://gitee.com/rainyjensen/mind-trip" target="_blank" rel="noopener" style="display:block;padding:1rem 1.1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;text-decoration:none;color:inherit;">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;">
+  <a class="project-card" href="https://gitee.com/rainyjensen/mind-trip" target="_blank" rel="noopener">
+    <div class="pc-head">
       <strong>MindTrip</strong>
-      <span style="font-size:.72rem;padding:.15rem .5rem;border-radius:999px;background:#C71D23;color:#fff;">Gitee</span>
+      <span class="lang-badge lang-badge--gitee">Gitee</span>
     </div>
-    <p style="margin:.5rem 0 0;font-size:.85rem;opacity:.8;">MindTrip 项目仓库(镜像)。</p>
+    <p class="pc-desc">MindTrip 项目仓库（镜像）。</p>
   </a>
-
-  <a href="https://gitee.com/rainyjensen/AtlasSplit" target="_blank" rel="noopener" style="display:block;padding:1rem 1.1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;text-decoration:none;color:inherit;">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;">
+  <a class="project-card" href="https://gitee.com/rainyjensen/AtlasSplit" target="_blank" rel="noopener">
+    <div class="pc-head">
       <strong>AtlasSplit</strong>
-      <span style="font-size:.72rem;padding:.15rem .5rem;border-radius:999px;background:#C71D23;color:#fff;">Gitee</span>
+      <span class="lang-badge lang-badge--gitee">Gitee</span>
     </div>
-    <p style="margin:.5rem 0 0;font-size:.85rem;opacity:.8;">输入 Excel/CSV + 需求描述,自动完成统计、分摊、校验并写回结果。</p>
+    <p class="pc-desc">输入 Excel/CSV + 需求描述，自动完成统计、分摊、校验并写回结果。</p>
   </a>
-
 </div>
 
 ---
 
-> 想了解更多或合作?欢迎回到 [首页](/myblog/) 点头像查看「关于我」,或直接发邮件给我 ✉️
+> 想了解更多或合作？欢迎回到 [首页](/) 点头像查看「关于我」，或直接发邮件给我 ✉️
