@@ -25,13 +25,12 @@ description: "Zack-Zhang1031 的独立游戏与开源项目展示"
   <p class="game-subtitle">轻松休闲的点钞小游戏，考验你的手速与眼力。在限定时间内尽可能准确地清点钞票，挑战更高分数。</p>
   <!-- 主展示区（带右下角切换） -->
   <div class="gs-main" data-media="shuqian">
-    <!-- 视频模式：暂无演示视频 -->
+    <!-- 视频模式：真实视频 -->
     <div class="gs-display gs-display--active" data-type="video">
-      <div class="gs-no-video">
-        <span class="gs-shot-icon">📹</span>
-        <p>暂无演示视频</p>
-        <span class="gs-video-type">📹 视频</span>
-      </div>
+      <video class="gs-real-video" controls preload="metadata" poster="/images/shuqian-1.png">
+        <source src="/videos/shuqian-demo.mp4" type="video/mp4">
+        您的浏览器不支持视频播放。
+      </video>
     </div>
     <!-- 截图模式：真实截图 -->
     <div class="gs-display" data-type="shot">
@@ -45,7 +44,8 @@ description: "Zack-Zhang1031 的独立游戏与开源项目展示"
   </div>
   <!-- 控制栏 -->
   <div class="game-controls-bar">
-    <span class="gs-ctrl-hint">📸 已有截图 · 🎬 视频整理中</span>
+    <button class="gs-ctrl-btn" onclick="window.__toggleVideoMute('shuqian', this)">🔇 静音</button>
+    <span class="gs-ctrl-hint">🎬 点击视频播放 · 右下角切换截图</span>
   </div>
   <div class="game-actions">
     <a class="play-btn play-btn--amber" href="https://www.crazygames.com/preview/d1b4d9b3-f1e7-419c-8336-c65c37fa3419?gameBuildId=10c47402-f440-40f9-a940-448fa1466cd3&qaTool=true&disableSubmitQA=true&role=developer" target="_blank" rel="noopener">▶ 在 CrazyGames 试玩</a>
