@@ -1,0 +1,52 @@
+# Hugo site config for Zack-Zhang1031's personal homepage
+# Served at: https://zack-zhang1031.github.io/myblog/
+
+baseURL = "https://zack-zhang1031.github.io/myblog/"
+languageCode = "zh-cn"
+title = "Zack-Zhang1031 | 个人主页"
+theme = "hugo-theme-dream"
+
+enableRobotsTXT = true
+hasCJKLanguage = true
+
+[pagination]
+  pagerSize = 10
+
+# Allow raw HTML (<img>/<video>/<iframe>/styled containers) inside markdown,
+# so the games showcase page can embed media and styled cards.
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "独立游戏开发者 / AI 与算法爱好者。在这里可以找到我发布的独立游戏、开源项目与技术随笔。"
+  author = "Zack-Zhang1031"
+  email = "zhangkun1031@hotmail.com"
+  avatar = "/images/48.png"
+  headerTitle = "Zack-Zhang1031"
+  motto = "热爱 AI、游戏与极客文化 🎮"
+
+  mainSections = ["posts"]
+  rss = true
+  enableToc = true
+  stickyNav = true
+  siteStartYear = 2024
+
+  # Dream theme color schemes (light / dark)
+  lightTheme = "emerald"
+  darkTheme = "forest"
+
+  # Custom nav items.
+  # - With `icon`: renders an icon button (ion-icon name).
+  # - Without `icon`, with `title`: renders a text link.
+  # NOTE: the theme outputs `href` as-is (no relURL), so internal links
+  # must include the `/myblog/` base path of this project site.
+  [params.navItems]
+    games = { href = "/myblog/games/", title = "作品", target = "_self" }
+    github = { href = "https://github.com/Zack-Zhang1031", title = "GitHub", target = "_blank", icon = "logo-github" }
+    gitee = { href = "https://gitee.com/rainyjensen", title = "Gitee", target = "_blank", icon = "git-branch-outline" }
+    bilibili = { href = "https://space.bilibili.com/31032895", title = "哔哩哔哩", target = "_blank", icon = "play-circle-outline" }
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
